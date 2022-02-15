@@ -85,8 +85,8 @@ jun.name = "jun"
 // 오류) jun.class = "스위프트" // 불변 인스턴스이므로 프로퍼티 값 변경 불가, 컴파일 오류 발생.
 jun.selfIntroduce() // 저는 스위프트반 jun입니다. // 인스턴스 메소더로 빠짐.
 
-let yuri: Student = Student()
+var yuri: Student = Student()
 
 yuri.name = "yuri"
-yuri.selfIntroduce() // 저는 Swift반 yuri입니다. // 인스턴스 메소더로 빠짐.ㅍ
+yuri.selfIntroduce() // 저는 Swift반 yuri입니다. // 인스턴스 메소더로 빠짐.
 
