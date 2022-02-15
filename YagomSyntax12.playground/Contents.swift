@@ -1,6 +1,6 @@
 import Cocoa
 
-// 구조체
+// struct 구조체
 // 프로퍼티 - 구조체 안에 있는 변수
 // 메소드 - 구조체 안에 있는 함수
 
@@ -82,8 +82,8 @@ Student.selfIntroduce() // 학생타입입니다.
 
 var jun: Student = Student()
 jun.name = "jun"
-jun.class = "Swift"
-jun.selfIntroduce() // 저는 Swift반 jun입니다.
+jun.class = "스위프트"
+jun.selfIntroduce() // 저는 스위프트반 jun입니다.
 
 let yuri: Student = Student()
 
