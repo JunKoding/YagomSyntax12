@@ -67,7 +67,7 @@ Sample.typeMethod() // Sample이라는 구조체에서 사용하는 type method
 
 struct Student {
     var name: String = "Unknown"
-    var `class`: String = "Swift" // class는 class타입이 존재하므로 그냥 못쓰고 `class` 강세표로 묶어서 사용한다. 한글일때는 ₩, 영어일때 `.
+    let `class`: String = "Swift" // class는 class타입이 존재하므로 그냥 못쓰고 `class` 강세표로 묶어서 사용한다. 한글일때는 ₩, 영어일때 `.
     
     static func selfIntroduce() {
         print("학생타입입니다.")
@@ -82,7 +82,7 @@ Student.selfIntroduce() // 학생타입입니다.
 
 var jun: Student = Student()
 jun.name = "jun"
-jun.class = "스위프트"
+// 오류) jun.class = "스위프트"
 jun.selfIntroduce() // 저는 스위프트반 jun입니다.
 
 let yuri: Student = Student()
