@@ -78,15 +78,15 @@ struct Student {
     }
 }
 
-Student.selfIntroduce() // 학생타입입니다.
+Student.selfIntroduce() // 학생타입입니다. 타입 메소드로 빠짐.
 
 var jun: Student = Student()
 jun.name = "jun"
-// 오류) jun.class = "스위프트"
+// 오류) jun.class = "스위프트" // 불변 인스턴스이므로 프로퍼티 값 변경 불가, 컴파일 오류 발생.
 jun.selfIntroduce() // 저는 스위프트반 jun입니다.
 
 let yuri: Student = Student()
 
-// yuri.name = "yuri" // 불변 인스턴스이므로 프로퍼티 값 변경 불가, 컴파일 오류 발생.
-yuri.selfIntroduce() // 저는 Swift반 Unknown입니다.
+yuri.name = "yuri"
+yuri.selfIntroduce() // 저는 Swift반 yuri입니다.
 
