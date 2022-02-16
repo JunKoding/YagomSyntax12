@@ -67,7 +67,7 @@ Sample.typeMethod() // Sample이라는 구조체에서 사용하는 type method
 
 struct Student {
     var name: String = "Unknown"
-    let `class`: String = "Swift" // class는 class타입이 존재하므로 그냥 못쓰고 `class` 강세표로 묶어서 사용한다. 한글일때는 ₩, 영어일때 `.
+    var `class`: String = "Swift" // class는 class타입이 존재하므로 그냥 못쓰고 `class` 강세표로 묶어서 사용한다. 한글일때는 ₩, 영어일때 `.
     
     static func selfIntroduce() {
         print("학생타입입니다.")
@@ -82,11 +82,12 @@ Student.selfIntroduce() // 학생타입입니다. 타입 메소드로 빠짐.
 
 var jun: Student = Student()
 jun.name = "jun"
-// 오류) jun.class = "스위프트" // 불변 인스턴스이므로 프로퍼티 값 변경 불가, 컴파일 오류 발생.
-jun.selfIntroduce() // 저는 스위프트반 jun입니다. // 인스턴스 메소더로 빠짐.
+jun.class = "스위프트"
+jun.selfIntroduce() // 저는 스위프트반 jun입니다. 인스턴스 메소드로 빠짐.
 
-var yuri: Student = Student()
+let yuri: Student = Student()
 
-yuri.name = "yuri"
-yuri.selfIntroduce() // 저는 Swift반 yuri입니다. // 인스턴스 메소더로 빠짐.
-
+// 오류) yuri.name = "yuri"
+// 가변 프로퍼티를 let으로 설정했기 때문에 변경이 불가능하다.
+yuri.selfIntroduce()
+// 저는 Swift반 Unknown입니다. 인스턴스 메소드로 빠짐.
